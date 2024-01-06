@@ -1,7 +1,5 @@
-function Home(){
-  return <h1>Tamo junto sempre!!! ❤️‍🔥❤️ </h1>
+function Home() {
+  return <h1>Tamo junto sempre!!! ❤️‍🔥❤️ </h1>;
 }
 
-export default Home
-
-
+export default Home;
