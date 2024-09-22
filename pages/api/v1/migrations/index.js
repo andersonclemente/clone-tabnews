@@ -2,6 +2,7 @@ import migrationRunner from "node-pg-migrate";
 import { join } from "node:path";
 import database from "infra/database";
 
+//COM BUG EM MÉTODOS NÃO POST E NÃO GET
 export default async function migrations(request, response) {
   const dbClient = await database.getNewClient();
   const defaultMigrationsConfig = {
