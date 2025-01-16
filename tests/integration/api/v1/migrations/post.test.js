@@ -1,11 +1,12 @@
 import database from "infra/database";
 import fs from "fs";
 
-beforeAll(cleanDatabase);
+import orchestrator from "../orchestrator.js";
 
-async function cleanDatabase() {
+beforeAll(async () => {
+  await orchestrator.waitForAllServices();
   await database.query("drop schema public cascade; create schema public;");
-}
+});
 
 test("POST to /api/v1/migrations should return 200", async () => {
   const numberMigrationsToRun = fs.readdirSync("infra/migrations").length;
