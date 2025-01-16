@@ -20,3 +20,5 @@ async function waitForAllServices() {
 export default {
   waitForAllServices,
 };
+
+//um comentário de teste para ver mudança de PR
