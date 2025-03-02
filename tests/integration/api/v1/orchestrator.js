@@ -17,8 +17,8 @@ async function waitForAllServices() {
   }
 }
 
-export default {
+const orchestrator = {
   waitForAllServices,
 };
 
-//um comentário de teste para ver mudança de PR
+export default orchestrator;
